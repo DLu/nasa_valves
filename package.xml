@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <name>nasa_valves</name>
+  <version>0.0.0</version>
+  <description>The nasa_valves package</description>
+
+  <maintainer email="davidvlu@gmail.com">David V. Lu!!</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>urdf</run_depend>
+  <run_depend>xacro</run_depend>
+
+</package>
