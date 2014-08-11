@@ -1,0 +1,6 @@
+<launch>
+  <env name="GAZEBO_MODEL_PATH" value="$(find nasa_valves)/Media/models"/>
+  <param name="valve_description" command="$(find xacro)/xacro.py '$(find nasa_valves)/urdf/test_valve.xacro'" />
+  <node name="spawn_valve" pkg="gazebo_ros" type="spawn_model" args="-sdf -file $(find nasa_valves)/sdf/test_valve.sdf -model valve -y 1.7 -z 1.1 -P -1.57 -Y 1.57" respawn="false" output="screen" />
+</launch>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<robot name="valve" xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:property name="pipe_length" value=".23" />
+  <xacro:property name="wheel_scale" value="1.0" />
+  <xacro:include filename="$(find nasa_valves)/urdf/valve.xacro" />
+</robot>
+

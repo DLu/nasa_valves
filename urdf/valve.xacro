@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<robot name="valve" xmlns:xacro="http://wiki.ros.org/xacro">
+  <link name="wheel">
+    <visual>
+      <geometry>
+        <mesh filename="package://nasa_valves/Media/vrc_valve.dae" scale="${wheel_scale} ${wheel_scale} ${wheel_scale}"/>
+      </geometry>
+      <origin xyz="0.0 0.0 ${pipe_length/2}" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://nasa_valves/Media/vrc_valve.dae" scale="${wheel_scale} ${wheel_scale} ${wheel_scale}"/>
+      </geometry>
+      <origin xyz="0.0 0.0 ${pipe_length/2}" rpy="0 0 0"/>
+    </collision>
+  </link>
+  <link name="pipe">
+    <visual>
+      <geometry>
+        <cylinder radius="0.01" length="${pipe_length}"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.01" length="${pipe_length}"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    </collision>
+  </link>
+
+  <joint name="valve" type="revolute">
+    <parent link="pipe"/>
+    <child link="wheel"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-12.5663706144" upper="0" velocity="0"/>
+  </joint>
+</robot>
+
+

@@ -20,7 +20,7 @@
         <pose>0 0 0.15 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://vrc_valve/meshes/vrc_valve.dae</uri>
+            <uri>model://vrc_valve.dae</uri>
             <scale>1.6 1.6 1.6</scale>
           </mesh>
         </geometry>
@@ -29,16 +29,10 @@
         <pose>0 0 0.15 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://vrc_valve/meshes/vrc_valve.dae</uri>
+            <uri>model://vrc_valve.dae</uri>
             <scale>1.6 1.6 1.6</scale>
           </mesh>
         </geometry>
-        <material>
-          <script>
-            <uri>model://vrc_valve/materials/scripts</uri>
-            <uri>model://vrc_valve/materials/textures</uri>
-          </script>
-        </material>
       </visual>
     </link>
     <link name="pipe">
@@ -73,7 +67,6 @@
         </geometry>
         <material>
           <script>
-            <uri>file://media/materials/scripts</uri>
             <name>Gazebo/Green</name>
           </script>
         </material>
