@@ -35,6 +35,15 @@
     <axis xyz="0 0 1"/>
     <limit effort="1000.0" lower="-12.5663706144" upper="0" velocity="0"/>
   </joint>
+
+
+  <gazebo>
+    <!-- plugin name="gazebo_ros_controller_manager" filename="libgazebo_ros_controller_manager.so"> -->
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace></robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
 </robot>
 
 

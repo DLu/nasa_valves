@@ -110,5 +110,8 @@
         </ode>
       </physics>
     </joint>
+<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>valve</robotNamespace>
+    </plugin>
   </model>
 </sdf>
