@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import sys
-import resource_retriever
 import subprocess
 
 def find(package):
