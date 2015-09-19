@@ -1,6 +1,11 @@
 <launch>
-  <env name="GAZEBO_MODEL_PATH" value="$(find nasa_valves)/Media"/>
-  <param name="valve_description" command="$(find xacro)/xacro.py '$(find nasa_valves)/urdf/test_valve.xacro'" />
-  <node name="spawn_valve" pkg="gazebo_ros" type="spawn_model" args="-sdf -file $(find nasa_valves)/sdf/test_valve.sdf -model valve -x 0.25 -y 0.5 -z 1.6 -P -1.57 -Y 1.57" respawn="false" output="screen" />
+  <arg name="scale" default="1.6" />
+  <include file="$(find nasa_valves)/launch/macro_valve.launch">
+    <arg name="x" value="0.25"/>
+    <arg name="y" value="0.5"/>
+    <arg name="z" value="1.6"/>
+    <arg name="pitch" value="-1.57"/>
+    <arg name="yaw" value="1.57"/>
+    <arg name="scale" value="$(arg scale)"/>
+  </include>
 </launch>
-
